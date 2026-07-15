@@ -4,6 +4,15 @@
 // console.log(arr.map((num) => num * 5));
 // globalThis.console.log(module)
 // console.log();
-const add = require("./math")
+// const add = require("./math");
+// const sub = require("./math");
+//both will give same  output of sub cause module.export is single object o value 
+// console.log(add(5,10)); // give -5
+// console.log(sub(5,10)); // give -5
 
-console.log(add(5,10)); //
+
+const {add, sub, mul, div} =  require("./math");
+console.log(add(5,10));
+console.log(sub(5,10));
+console.log(mul(5,10));;
+console.log(div(5,10));
