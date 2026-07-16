@@ -1,0 +1,23 @@
+{
+  "name": "node_prac",
+  "version": "1.0.0",
+  "description": "node and express",
+  "homepage": "https://github.com/YashSatpute3142/Node.js-practice#readme",
+  "bugs": {
+    "url": "https://github.com/YashSatpute3142/Node.js-practice/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YashSatpute3142/Node.js-practice.git"
+  },
+  "license": "ISC",
+  "author": "Yash",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
