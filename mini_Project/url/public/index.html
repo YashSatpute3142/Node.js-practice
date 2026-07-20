@@ -42,7 +42,7 @@
         const fetchShortendUrl = async() => {
             const response = await fetch("/links");
             const links = await response.json();
-            console.log("Links :", links);
+            
 
             const list = document.getElementById("shortened-urls");
             list.innerHTML = "";

@@ -65,7 +65,7 @@ const server = createServer(async(req, res) => {
         }else{
             const links = await loadLinks();
             const shortCode = req.url.slice(1)
-            console.log("link red.", req.url);
+            
 
             if(links[shortCode]){
                 res.writeHead(302, {location : links[shortCode]});
@@ -84,7 +84,7 @@ const server = createServer(async(req, res) => {
         let body = "";
         req.on("data", (chunk) =>(body += chunk));
         req.on("end", async() => {
-            console.log(body);
+           
             const {url, shortCode} = JSON.parse(body);
 
             if(!url) {
