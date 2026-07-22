@@ -1,46 +1,31 @@
 import express from "express";
+import {PORT} from "./env.js";
+import path from "path"
 
 const app = express();
+const staticPath = path.join(import.meta.dirname, "public");
+app.use(express.static(staticPath))
 // const PORT = 3000;
-const PORT  = process.env.PORT || 3000;
+// const PORT  = process.env.PORT || 3000;
+app.get("/", (req, res) => {
+    // console.log(__dirname);
+     // console.log(__filename);
+    // console.log(import.meta.dirname);
+    // console.log(import.meta.filename);
+    // console.log(import.meta.url);
+    // const __filename = new URL(import.meta.url);
+    // console.log(__filename);
 
+    const homePagePath = path.join(import.meta.dirname, "public", "index.html");
 
-
-app.get("/", (req, res) => res.send("<h1>Hello World.....!</h1>"));
-app.get("/about", (req, res) => res.send("<h1>this is about page.....!</h1>"));
-
-app.get("/contact", (req, res) => {
-   return res.send (`<div class="container">
-        <h1>URL Shortener</h1>
-        <form id="shorten-form">
-            <div>
-                <label for="url">Enter URL:</label>
-                <input 
-                type="url" 
-                name="url"
-                id="yrl" 
-                required
-                >
-            </div>
-            <div>
-                <label for="shortCode">Enter shortCode:</label>
-                <input type="text" name="shortCode" id="shortCode" required>
-
-            </div>
-            <button type="submit">Shorten</button>
-
-        </form>
-
-        <h2>Shortenend URLs</h2>
-        <div class="urls">
-            <ul id="shortened-urls">
-
-        </ul>
-        </div>
-        
-    </div>`)
-});
-
+    res.sendFile(homePagePath);
+    
+    
+    
+    
+    
+    
+})
 
 app.listen(PORT, () => {
     console.log(`Server is Runnong at port :${PORT} `);

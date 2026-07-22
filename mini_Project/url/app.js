@@ -5,8 +5,11 @@ import path from "path";
 
 
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
+
 const DATA_FILE = path.join("data", "links.json");
+await writeFile(DATA_FILE, JSON.stringify({}))
 
 const serveFile = async(res,filePath, contentType) => {
     try {
@@ -109,7 +112,6 @@ const server = createServer(async(req, res) => {
 
 })
 
-server.listen(PORT, () => {
-    console.log(`Server Running at http://localhost:${PORT}`);
-    
-})
+server.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on port ${PORT}`);
+});
