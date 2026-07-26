@@ -1,0 +1,11 @@
+*   [33mbe08336[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #3 from YashSatpute3142/new-version
+[31m|[m[32m\[m  
+[31m|[m * [33m5b19897[m[33m ([m[1;31morigin/new-version[m[33m)[m appli EJS and final Commit
+* [32m|[m [33m44869ce[m Merge pull request #2 from YashSatpute3142/new-version
+[33m|[m[32m\[m[32m|[m 
+[33m|[m * [33m9f01208[m router and include and ejs
+[33m|[m * [33m850bac1[m initial commit
+[33m|[m[33m/[m  
+* [33m24ee7dd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m fixing port for deploy
+* [33mbed911d[m fixing port for deploy
+* [33mb8c9abc[m URL Node Project Deploy test
